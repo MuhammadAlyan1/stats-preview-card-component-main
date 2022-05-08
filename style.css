@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+/* 
+===============
+Root
+===============
+*/
+
+:root {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+/* 
+===============
+Body
+===============
+*/
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+/* 
+===============
+container
+===============
+*/
+.container {
+  background-color: hsl(244, 38%, 16%);
+}
+
+/* 
+===============
+content-div
+===============
+*/
+.content-div h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.content-div p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+.content-div span {
+  color: hsl(277, 64%, 61%);
+}
+
+/* 
+===============
+stats
+===============
+*/
+
+.stats h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.stats p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+/* 
+===============
+Mobile layout
+===============
+*/
+
+@media (max-width: 1390px) {
+  /* 
+  ===============
+  container
+  ===============
+  */
+
+  body {
+    padding: 10% 5% 10% 5%;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+
+  /* 
+  ===============
+  image-div
+  ===============
+  */
+  .image-div {
+    height: 50vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+        90deg,
+        rgba(157, 4, 245, 0.397),
+        rgba(157, 4, 245, 0.397)
+      ),
+      url("images/image-header-mobile.jpg");
+  }
+  /* 
+  ===============
+  content-div
+  ===============
+  */
+  .content-div {
+    padding: 10% 10% 5% 10%;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* 
+  =============== 
+  stats
+  ===============
+  */
+
+  .stats h1 {
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .stats p {
+    text-align: center;
+    margin-top: 6px;
+  }
+
+  .companies,
+  .templates,
+  .queries {
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+  }
+
+  .queries {
+    padding-bottom: 3rem;
+  }
+}
+
+/* 
+===============
+desktop layout
+===============
+*/
+
+@media (min-width: 1400px) {
+  body {
+    padding: 10% 20%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "content-div image-div"
+      "stats image-div";
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image-div {
+    grid-area: image-div;
+    height: 50vh;
+    background-position: center center;
+    background-image: linear-gradient(
+        90deg,
+        rgba(157, 4, 245, 0.397),
+        rgba(157, 4, 245, 0.397)
+      ),
+      url("./images/image-header-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content-div {
+    grid-area: content-div;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+
+  .stats {
+    grid-area: stats;
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+}
